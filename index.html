@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bajet Gaji Bulanan</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    
+
+    <section class="wrapper">
+        <p class="instruction">Arahan:<br>
+            1. Masukkan gaji bersih (gaji selepas tolak cukai, EPF, SOCSO etc).<br>
+            2. Kalkulator akan mengira bajet mengikut formula 50/30/20 dan 70/20/10 secara automatik.</p>        
+
+        <h1>Bajet Gaji Bulanan</h1>
+
+        <div class="monthlyIncome">
+            <label for="">Gaji Bersih:</label>
+            <input type="text" placeholder="RM" class="income-after-tax">
+        </div>
+
+        <div class="rules">
+            <div class="rules1">
+                <h3>Bajet 50/30/20</h3>
+                <div class="percent-result">
+                    <p>50% KEPERLUAN</p>
+                    <p class="result"><span class="rules1-needs"></span></p><br>
+        
+                    <p>30% KEMAHUAN</p>
+                    <p class="result"><span class="rules1-wants"></span></p><br>
+        
+                    <p>20% SIMPANAN</p>
+                    <p class="result"><span class="rules1-saves"></span></p>
+                </div>
+            </div>
+            <div class="rules2">
+                <h3>Bajet 70/20/10</h3>
+                <div class="percent-result">
+                    <p>70% KEPERLUAN</p>
+                    <p class="result"><span class="rules2-needs"></span></p><br>
+        
+                    <p>20% KEMAHUAN</p>
+                    <p class="result"><span class="rules2-wants"></span></p><br>
+        
+                    <p>10% SIMPANAN</p>
+                    <p class="result"><span class="rules2-saves"></span></p>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
