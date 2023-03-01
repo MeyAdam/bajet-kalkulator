@@ -1,95 +1,188 @@
+$primary-color: #0000cc;
+$bg-color: #e6e6ff;
+
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-@media (max-width:767px) {
-    body {
-        font-size: 14px;
-    }
-}
-
 body {
-    background: #e6e6ff;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background: $bg-color;
+    line-height: 1.5;
+    font-size: 14px;
 }
 
-.instruction {
-    color: #0000cc;
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 90%;
-    margin: 0 auto 3rem;
-    line-height: 1.5;
+    min-height: 90vh;
+    margin: auto;
+    padding: 50px 0;
+}
+
+.language {
+    text-align: right;
+    margin-bottom: 10px;
+
+    p {
+        color: $primary-color;
+        cursor: pointer;
+    }
+
+    // window load, default malay
+    .lang-active {
+        color: black;
+        cursor: initial;
+        display: none;
+    }
 }
 
 .wrapper {
-    width: 700px;
-    margin: 0 10px;
     background: white;
-    padding: 50px 10px;
+    padding: 30px 20px;
     border-radius: 10px;
+    box-shadow: 1px 1px 6px #000;
+
+    h1 {
+        color: $primary-color;
+    }
 }
 
-h1 {
+.instruction {
+    color: $primary-color;
+    margin-bottom: 50px;
+}
+
+.headline {
     text-align: center;
-    color: #0000cc;
+    margin-bottom: 40px;
+
+    h1 {
+        margin-bottom: 10px;
+    }
+}
+
+input {
+    height: 40px;
+    width: 100px;
+    font-size: 14px;
+    padding: 0 10px;
+    outline: none;
+}
+
+.rules {
+    // display: flex;
+    display: none;
+    flex-direction: column;
+    row-gap: 50px;
+}
+
+.result-rules {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.result {
+    color: $primary-color;
+}
+
+.title {
+    color: white;
+    text-align: center;
+    padding: 5px 10px;
+    background: $primary-color;
     margin-bottom: 20px;
 }
 
-.monthlyIncome {
-    text-align: center;
-    margin-bottom: 20px;
+.details-needs {
+    display: grid;
+    gap: 20px;
+}
 
-    label {
-        margin-right: 10px;
+.details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    margin: auto;
+}
+
+.customNeed {
+    width: 50%;
+}
+
+.addNewNeedLink {
+    cursor: pointer;
+    text-decoration: underline;
+    color: $primary-color;
+    margin: 30px 0 50px 0;
+
+    &:hover {
+        color: purple;
+    }
+}
+
+.bold-text {
+    font-weight: bold;
+}
+
+.total-needs {
+    color: $primary-color;
+}
+
+.calculate-needs {
+    // display: flex;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+@media screen and (min-width:576px) {
+    body {
+        font-size: 16px;
+    }
+    
+    .wrapper {
+        padding: 30px;
     }
 
     input {
-        height: 40px;
+        font-size: 16px;
         width: 10rem;
-        font-size: 1rem;
-        padding: 0 10px;
-        outline: none;
-
-        &:focus {
-            border: 2px solid #0000cc;
-            border-radius: 3px;
-        }
     }
 }
 
-.rules {
-    display: none;
-    grid-template-columns: 1fr 1fr;
-    justify-items: center;
-    height: 100%;
-    transition: all 3s ease;
-}
-
-.choose-budget {
-    margin-bottom: 20px;
-
-    .budget-list {
-        input {
-            margin: 5px 0;
-            accent-color: blue;
-        }
+@media screen and (min-width:768px) {
+    .details {
+        width: 70%;
     }
 }
 
-.rules {
-    h3 {
-        margin-bottom: 10px;
-    }
-
-    .percent-result {
-        .result {
-            color: #0000cc;
-        }
+@media screen and (min-width:992px) {
+    .container {
+        width: 70%;
     }
 }
 
+@media screen and (min-width:1200px) {
+    .container {
+        width: 60%;
+    }
+}
+
+@media screen and (min-width:1400px) {
+    .container {
+        width: 50%;
+    }
+
+    .details {
+        width: 80%;
+    }
+}

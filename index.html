@@ -9,52 +9,127 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
-<body>   
-
-    <section class="wrapper">
-        <p class="instruction">Arahan:<br>
-            1. Masukkan gaji bersih (gaji selepas tolak cukai, EPF, SOCSO etc).<br>
-            2. Kalkulator akan mengira bajet mengikut formula 50/30/20 dan 70/20/10 secara automatik.</p>        
-
-        <h1>Bajet Gaji Bulanan</h1>
-
-        <div class="monthlyIncome">
-            <label for="">Gaji Bersih:</label>
-            <input type="text" placeholder="RM" class="income-after-tax">
+<body>
+    <div class="container">
+        <div class="language">
+            <p class="malay lang-active">Tukar ke Bahasa Melayu</p>
+            <p class="english">Change to English</p>
         </div>
-
-        <div class="rules">
-            <div class="rules1">
-                <h3>Bajet 50/30/20</h3>
-                <div class="percent-result">
-                    <p>50% KEPERLUAN</p>
-                    <p class="result"><span class="rules1-needs"></span></p><br>
-        
-                    <p>30% KEMAHUAN</p>
-                    <p class="result"><span class="rules1-wants"></span></p><br>
-        
-                    <p>20% SIMPANAN</p>
-                    <p class="result"><span class="rules1-saves"></span></p>
+        <section class="wrapper">
+            <p class="instruction">Arahan:<br>
+                1. Masukkan gaji bersih (gaji selepas tolak cukai, EPF, SOCSO etc).<br>
+                2. Kalkulator akan mengira bajet mengikut formula 50/30/20 dan 70/20/10 secara automatik.</p>
+            <div class="headline">
+                <h1>Bajet Gaji Bulanan</h1>
+                <div class="monthlyIncome">
+                    <label for="">Gaji Bersih:</label>
+                    <input type="text" placeholder="RM" class="income-after-tax">
                 </div>
             </div>
-            <div class="rules2">
-                <h3>Bajet 70/20/10</h3>
-                <div class="percent-result">
-                    <p>70% KEPERLUAN</p>
-                    <p class="result"><span class="rules2-needs"></span></p><br>
-        
-                    <p>20% KEMAHUAN</p>
-                    <p class="result"><span class="rules2-wants"></span></p><br>
-        
-                    <p>10% SIMPANAN</p>
-                    <p class="result"><span class="rules2-saves"></span></p>
+            <div class="rules">
+                <div class="result-rules">
+                    <div class="rules1">
+                        <h3>Bajet 50/30/20</h3>
+                        <div class="percent-result">
+                            <p class="need50text">50% KEPERLUAN</p>
+                            <p class="result"><span class="rules1-needs"></span></p><br>
+                            <p class="want30text">30% KEMAHUAN</p>
+                            <p class="result"><span class="rules1-wants"></span></p><br>
+                            <p class="save20text">20% SIMPANAN</p>
+                            <p class="result"><span class="rules1-saves"></span></p>
+                        </div>
+                    </div>
+                    <div class="rules2">
+                        <h3>Bajet 70/20/10</h3>
+                        <div class="percent-result">
+                            <p class="need70text">70% KEPERLUAN</p>
+                            <p class="result"><span class="rules2-needs"></span></p><br>
+                            <p class="want20text">20% KEMAHUAN</p>
+                            <p class="result"><span class="rules2-wants"></span></p><br>
+                            <p class="save10text">10% SIMPANAN</p>
+                            <p class="result"><span class="rules2-saves"></span></p>
+                        </div>
+                    </div>
+                </div>
+                <!--  -->
+                <div class="calculate-needs-title">
+                    <h3 class="title">PERBELANJAAN KEPERLUAN / KOMITMEN</h3>
+                    <div class="details-needs">
+                        <div class="details">
+                            <label class="bilik-rumah">Bilik/Rumah (Sewa/ Pinjaman)</label>
+                            <input type="text" placeholder="RM" class="need-list">
+                        </div>
+                        <div class="details">
+                            <label class="elektrik">Elektrik</label>
+                            <input type="text" placeholder="RM" class="need-list">
+                        </div>
+                        <div class="details">
+                            <label class="air">Air</label>
+                            <input type="text" placeholder="RM" class="need-list">
+                        </div>
+                        <div class="details">
+                            <label>Internet</label>
+                            <input type="text" placeholder="RM" class="need-list">
+                        </div>
+                        <div class="details">
+                            <label class="bil-tel">Bil Telefon</label>
+                            <input type="text" placeholder="RM" class="need-list">
+                        </div>
+                        <div class="details">
+                            <label class="keluarga">Keluarga</label>
+                            <input type="text" placeholder="RM" class="need-list">
+                        </div>
+                        <div class="details">
+                            <label class="hutang">Hutang/ Pinjaman<br>(Pelajaran/ Peribadi etc.)</label>
+                            <input type="text" placeholder="RM" class="need-list">
+                        </div>
+                        <div class="details">
+                            <label class="kenderaan">Kenderaan<br>(Maintenance/ Minyak etc.)</label>
+                            <input type="text" placeholder="RM" class="need-list">
+                        </div>
+                        <div class="details">
+                            <label class="makan-minum">Makan Minum</label>
+                            <input type="text" placeholder="RM" class="need-list">
+                        </div>
+                        <div class="details">
+                            <label class="insurans">Insurans/ Takaful/ Medical Card</label>
+                            <input type="text" placeholder="RM" class="need-list">
+                        </div>
+                        <input type="text" class="sumOldNeedList" hidden>
+                    </div>
+                    <div class="details">
+                        <label class="addNewNeedLink">+ Tambah perbelanjaan</label>
+                    </div>
+                    <input type="text" class="sumNewNeedList" hidden>
+
+                    <div class="calculate-needs">
+                        <div class="calculate-all">
+                            <div>
+                                <p class="bold-text total-text">Jumlah Keperluan / Komitmen:</p><span
+                                    class="total-needs blue-text"></span>
+                            </div>
+                            <div style="margin-top: 20px;">
+                                <p class="bold-text baki-bajet-50">Baki Bajet Keperluan daripada formula 50%:</p><span
+                                    class="balance50"></span>
+                            </div>
+                            <div style="margin-top: 20px;">
+                                <p class="bold-text baki-bajet-70">Baki Bajet Keperluan daripada formula 70%:</p><span
+                                    class="balance70"></span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
+            <p class="nota" style="margin-top: 50px;font-size: 12px;">Nota: Formula kewangan ini hanyalah sebagai garis panduan.</p>
+        </section>
+		<p style="font-size:12px; margin-top:10px; color:#b3b3ff;">Made by Mey Adam</p>
+    </div>
 
-    </section>
 
-    <script src="app.js"></script>
+    <!-- <p>created by <a href="https://meyadam.com">Mey Adam</a> from <a href="https://miwebdesigner.com">MI Web Designer</a>.</p> -->
+
+    <script src="script.js"></script>
+    <script src="language.js"></script>
 
 </body>
 

@@ -1,82 +1,169 @@
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
 
-@media (max-width: 767px) {
-  body {
-    font-size: 14px;
-  }
-}
 body {
   background: #e6e6ff;
-  height: 100vh;
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+.container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
+  width: 90%;
+  min-height: 90vh;
+  margin: auto;
+  padding: 50px 0;
+}
+
+.language {
+  text-align: right;
+  margin-bottom: 10px;
+}
+.language p {
+  color: #0000cc;
+  cursor: pointer;
+}
+.language .lang-active {
+  color: black;
+  cursor: initial;
+  display: none;
+}
+
+.wrapper {
+  background: white;
+  padding: 30px 20px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 6px #000;
+}
+.wrapper h1 {
+  color: #0000cc;
 }
 
 .instruction {
   color: #0000cc;
-  width: 90%;
-  margin: 0 auto 3rem;
-  line-height: 1.5;
+  margin-bottom: 50px;
 }
 
-.wrapper {
-  width: 700px;
-  margin: 0 10px;
-  background: white;
-  padding: 50px 10px;
-  border-radius: 10px;
-}
-
-h1 {
+.headline {
   text-align: center;
-  color: #0000cc;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
+}
+.headline h1 {
+  margin-bottom: 10px;
 }
 
-.monthlyIncome {
-  text-align: center;
-  margin-bottom: 20px;
-}
-.monthlyIncome label {
-  margin-right: 10px;
-}
-.monthlyIncome input {
+input {
   height: 40px;
-  width: 10rem;
-  font-size: 1rem;
+  width: 100px;
+  font-size: 14px;
   padding: 0 10px;
   outline: none;
-}
-.monthlyIncome input:focus {
-  border: 2px solid #0000cc;
-  border-radius: 3px;
 }
 
 .rules {
   display: none;
-  grid-template-columns: 1fr 1fr;
-  justify-items: center;
-  height: 100%;
-  transition: all 3s ease;
+  flex-direction: column;
+  row-gap: 50px;
 }
 
-.choose-budget {
+.result-rules {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.result {
+  color: #0000cc;
+}
+
+.title {
+  color: white;
+  text-align: center;
+  padding: 5px 10px;
+  background: #0000cc;
   margin-bottom: 20px;
 }
-.choose-budget .budget-list input {
-  margin: 5px 0;
-  accent-color: blue;
+
+.details-needs {
+  display: grid;
+  gap: 20px;
 }
 
-.rules h3 {
-  margin-bottom: 10px;
+.details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+  margin: auto;
 }
-.rules .percent-result .result {
+
+.customNeed {
+  width: 50%;
+}
+
+.addNewNeedLink {
+  cursor: pointer;
+  text-decoration: underline;
   color: #0000cc;
+  margin: 30px 0 50px 0;
+}
+.addNewNeedLink:hover {
+  color: purple;
+}
+
+.bold-text {
+  font-weight: bold;
+}
+
+.total-needs {
+  color: #0000cc;
+}
+
+.calculate-needs {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+@media screen and (min-width: 576px) {
+  body {
+    font-size: 16px;
+  }
+  .wrapper {
+    padding: 30px;
+  }
+  input {
+    font-size: 16px;
+    width: 10rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .details {
+    width: 70%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .container {
+    width: 70%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 60%;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .container {
+    width: 50%;
+  }
+  .details {
+    width: 80%;
+  }
 }
