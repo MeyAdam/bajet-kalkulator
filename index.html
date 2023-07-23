@@ -2,134 +2,217 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bajet Gaji Bulanan</title>
-    <link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bajet Gaji Bulanan</title>
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
-    <div class="container">
-        <div class="language">
-            <p class="malay lang-active">Tukar ke Bahasa Melayu</p>
-            <p class="english">Change to English</p>
-        </div>
-        <section class="wrapper">
-            <p class="instruction">Arahan:<br>
-                1. Masukkan gaji bersih (gaji selepas tolak cukai, EPF, SOCSO etc).<br>
-                2. Kalkulator akan mengira bajet mengikut formula 50/30/20 dan 70/20/10 secara automatik.</p>
-            <div class="headline">
-                <h1>Bajet Gaji Bulanan</h1>
-                <div class="monthlyIncome">
-                    <label for="">Gaji Bersih:</label>
-                    <input type="text" placeholder="RM" class="income-after-tax">
-                </div>
-            </div>
-            <div class="rules">
-                <div class="result-rules">
-                    <div class="rules1">
-                        <h3>Bajet 50/30/20</h3>
-                        <div class="percent-result">
-                            <p class="need50text">50% KEPERLUAN</p>
-                            <p class="result"><span class="rules1-needs"></span></p><br>
-                            <p class="want30text">30% KEMAHUAN</p>
-                            <p class="result"><span class="rules1-wants"></span></p><br>
-                            <p class="save20text">20% SIMPANAN</p>
-                            <p class="result"><span class="rules1-saves"></span></p>
-                        </div>
-                    </div>
-                    <div class="rules2">
-                        <h3>Bajet 70/20/10</h3>
-                        <div class="percent-result">
-                            <p class="need70text">70% KEPERLUAN</p>
-                            <p class="result"><span class="rules2-needs"></span></p><br>
-                            <p class="want20text">20% KEMAHUAN</p>
-                            <p class="result"><span class="rules2-wants"></span></p><br>
-                            <p class="save10text">10% SIMPANAN</p>
-                            <p class="result"><span class="rules2-saves"></span></p>
-                        </div>
-                    </div>
-                </div>
-                <!--  -->
-                <div class="calculate-needs-title">
-                    <h3 class="title">PERBELANJAAN KEPERLUAN / KOMITMEN</h3>
-                    <div class="details-needs">
-                        <div class="details">
-                            <label class="bilik-rumah">Bilik/Rumah (Sewa/ Pinjaman)</label>
-                            <input type="text" placeholder="RM" class="need-list">
-                        </div>
-                        <div class="details">
-                            <label class="elektrik">Elektrik</label>
-                            <input type="text" placeholder="RM" class="need-list">
-                        </div>
-                        <div class="details">
-                            <label class="air">Air</label>
-                            <input type="text" placeholder="RM" class="need-list">
-                        </div>
-                        <div class="details">
-                            <label>Internet</label>
-                            <input type="text" placeholder="RM" class="need-list">
-                        </div>
-                        <div class="details">
-                            <label class="bil-tel">Bil Telefon</label>
-                            <input type="text" placeholder="RM" class="need-list">
-                        </div>
-                        <div class="details">
-                            <label class="keluarga">Keluarga</label>
-                            <input type="text" placeholder="RM" class="need-list">
-                        </div>
-                        <div class="details">
-                            <label class="hutang">Hutang/ Pinjaman<br>(Pelajaran/ Peribadi etc.)</label>
-                            <input type="text" placeholder="RM" class="need-list">
-                        </div>
-                        <div class="details">
-                            <label class="kenderaan">Kenderaan<br>(Maintenance/ Minyak etc.)</label>
-                            <input type="text" placeholder="RM" class="need-list">
-                        </div>
-                        <div class="details">
-                            <label class="makan-minum">Makan Minum</label>
-                            <input type="text" placeholder="RM" class="need-list">
-                        </div>
-                        <div class="details">
-                            <label class="insurans">Insurans/ Takaful/ Medical Card</label>
-                            <input type="text" placeholder="RM" class="need-list">
-                        </div>
-                        <input type="text" class="sumOldNeedList" hidden>
-                    </div>
-                    <div class="details">
-                        <label class="addNewNeedLink">+ Tambah perbelanjaan</label>
-                    </div>
-                    <input type="text" class="sumNewNeedList" hidden>
 
-                    <div class="calculate-needs">
-                        <div class="calculate-all">
-                            <div>
-                                <p class="bold-text total-text">Jumlah Keperluan / Komitmen:</p><span
-                                    class="total-needs blue-text"></span>
-                            </div>
-                            <div style="margin-top: 20px;">
-                                <p class="bold-text baki-bajet-50">Baki Bajet Keperluan daripada formula 50%:</p><span
-                                    class="balance50"></span>
-                            </div>
-                            <div style="margin-top: 20px;">
-                                <p class="bold-text baki-bajet-70">Baki Bajet Keperluan daripada formula 70%:</p><span
-                                    class="balance70"></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <p class="nota" style="margin-top: 50px;font-size: 12px;">Nota: Formula kewangan ini hanyalah sebagai garis panduan.</p>
-        </section>
-		<p style="font-size:12px; margin-top:10px; color:#b3b3ff;">Made by Mey Adam</p>
+  <div class="all-content d-flex flex-column min-vh-100 m-auto justify-content-center py-3">
+    <div class="btn-language d-flex justify-content-end">
+      <button type="button" class="btn btn_english">Change to English</button>
+      <button type="button" class="btn btn_malay lang-active">Tukar ke Bahasa Melayu</button>
     </div>
 
+    <div class="contents bg-white p-4 pb-0 p-md-5 pb-md-0 rounded-3 shadow">
+      <div class="instructions">
+        <p>Arahan :</p>
+        <ol id="trans_steps">
+          <li>Masukkan gaji bersih (gaji selepas tolak cukai, EPF, SOCSO etc).</li>
+          <li>Pilih formula kiraan yang diingini.</li>
+          <li>Kalkulator akan mengira bajet gaji mengikut formula pilihan.</li>
+        </ol>
+      </div>
 
-    <!-- <p>created by <a href="https://meyadam.com">Mey Adam</a> from <a href="https://miwebdesigner.com">MI Web Designer</a>.</p> -->
+      <div class="get-input mt-5 d-flex flex-column gap-4">
+        <h1 class="text-center" id="trans_headline">Bajet Gaji Bulanan</h1>
 
-    <script src="script.js"></script>
-    <script src="language.js"></script>
+        <div class="d-flex gap-2 justify-content-center">
+          <div>
+            <label class="col-form-label" id="trans_netsalary">Gaji Bersih :</label>
+          </div>
+          <div>
+            <input type="number" id="net_salary" class="form-control" placeholder="RM">
+          </div>
+        </div>
+
+        <div class="choose_formula d-none d-flex flex-column align-items-center justify-content-center mt-3">
+          <h5>Pilih Formula Kiraan</h5>
+
+          <div class="formula_choice">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="formula" id="formula1">
+              <label class="form-check-label" for="formula1" id="trans_formula1">50% Komitmen, 30% Kehendak, 20%
+                Simpanan</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="formula" id="formula2">
+              <label class="form-check-label" for="formula2" id="trans_formula2">70% Komitmen, 20% Kehendak, 10%
+                Simpanan</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="formula" id="formula3">
+              <label class="form-check-label" for="formula3" id="trans_formula3">60% Komitmen, 30% Kehendak, 10%
+                Simpanan</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="formula_and_commitments d-none d-block mt-5">
+        <div class="d-flex flex-column align-items-center">
+          <div>
+            <h6><span id="trans_budget">Bajet</span> <span id="formula_txt"></span></h6>
+          </div>
+
+          <div class="d-sm-flex w-100 justify-content-evenly text-center">
+            <div>
+              <p class="mb-0"><span class="needs_percent"></span> <span id="trans_commitment">KOMITMEN</span></p>
+              <p class="text-primary-color">RM <span id="needs_amt_txt"></span></p>
+            </div>
+
+            <div>
+              <p class="mb-0"><span id="wants_percent"></span> <span id="trans_want">KEHENDAK</span></p>
+              <p class="text-primary-color">RM <span id="wants_amt_txt"></span></p>
+            </div>
+
+            <div>
+              <p class="mb-0"><span id="savings_percent"></span> <span id="trans_saving">SIMPANAN</span></p>
+              <p class="text-primary-color">RM <span id="savings_amt_txt"></span></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="commitments_container mt-5">
+          <div class="title p-2">
+            <h5 class="text-white fw-bold m-0 text-center">PERBELANJAAN KOMITMEN</h5>
+          </div>
+
+          <div class="commitments_details">
+            <div class="details">
+              <div>
+                <label class="col-form-label" id="trans_roomhouse">Bilik/Rumah (Sewa/ Pinjaman)</label>
+              </div>
+              <div>
+                <input type="number" class="form-control old_needs" placeholder="RM">
+              </div>
+            </div>
+
+            <div class="details">
+              <div>
+                <label class="col-form-label" id="trans_electric">Elektrik</label>
+              </div>
+              <div>
+                <input type="number" class="form-control old_needs" placeholder="RM">
+              </div>
+            </div>
+
+            <div class="details">
+              <div>
+                <label class="col-form-label" id="trans_water">Air</label>
+              </div>
+              <div>
+                <input type="number" class="form-control old_needs" placeholder="RM">
+              </div>
+            </div>
+
+            <div class="details">
+              <div>
+                <label class="col-form-label" id="trans_internet">Internet</label>
+              </div>
+              <div>
+                <input type="number" class="form-control old_needs" placeholder="RM">
+              </div>
+            </div>
+
+            <div class="details">
+              <div>
+                <label class="col-form-label" id="trans_phonebill">Bil Telefon</label>
+              </div>
+              <div>
+                <input type="number" class="form-control old_needs" placeholder="RM">
+              </div>
+            </div>
+
+            <div class="details">
+              <div>
+                <label class="col-form-label" id="trans_family">Keluarga</label>
+              </div>
+              <div>
+                <input type="number" class="form-control old_needs" placeholder="RM">
+              </div>
+            </div>
+
+            <div class="details">
+              <div>
+                <label class="col-form-label" id="trans_debt">Hutang / Pinjaman (Pelajaran / Peribadi etc.)</label>
+              </div>
+              <div>
+                <input type="number" class="form-control old_needs" placeholder="RM">
+              </div>
+            </div>
+
+            <div class="details">
+              <div>
+                <label class="col-form-label" id="trans_vehicle">Kenderaan (Maintenance/ Minyak etc.)</label>
+              </div>
+              <div>
+                <input type="number" class="form-control old_needs" placeholder="RM">
+              </div>
+            </div>
+
+            <div class="details">
+              <div>
+                <label class="col-form-label" id="trans_fooddrink">Makan Minum</label>
+              </div>
+              <div>
+                <input type="number" class="form-control old_needs" placeholder="RM">
+              </div>
+            </div>
+
+            <div class="details">
+              <div>
+                <label class="col-form-label" id="trans_insurance">Insurans / Takaful / Medical Card</label>
+              </div>
+              <div>
+                <input type="number" class="form-control old_needs" placeholder="RM">
+              </div>
+            </div>
+          </div>
+
+          <div class="commitments_details">
+            <p id="add_new_link">+ Tambah Perbelanjaan</p>
+          </div>
+
+          <div class="d-flex justify-content-center mt-5">
+            <button type="button" class="btn text-white fw-bold shadow" id="btn_calculate">Tekan Sini Untuk Kira Jumlah
+              Komitmen</button>
+          </div>
+
+          <div class="total_commitments text-center mt-5 d-none">
+            <div>
+              <p class="mb-0" id="trans_totalcommitments">Jumlah Komitmen :</p>
+              <p class="text-primary-color">RM <span id="total_all_commitments"></span></p>
+            </div>
+            <div>
+              <p class="mb-0" id="trans_budgetbalance">Baki daripada bajet komitmen :</p>
+              <p class="text-primary-color" id="bal_needs_txt"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <p class="note" style="margin-top: 50px;font-size: 12px; margin-bottom:10px;">Nota: Formula kewangan ini hanyalah sebagai garis panduan.</p>
+    </div>
+    <p style="margin-top: 10px; font-size: 12px; opacity: .3;">Made by <a href="https://meyadam.com">MeyAdam</a></p>
+  </div>
+
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/language.js"></script>
+  <script src="assets/js/main.js"></script>
 
 </body>
 
