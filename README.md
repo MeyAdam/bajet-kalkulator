@@ -12,3 +12,4 @@
 - Optimize code (maybe).
 - Use Bootstrap.
 - Different logics.
+- Can be install as PWA.
