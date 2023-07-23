@@ -5,8 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bajet Gaji Bulanan</title>
+  <link rel="manifest" href="manifest.json">
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" href="images/icon-512x512.png"/>
 </head>
 
 <body>
@@ -204,11 +206,26 @@
           </div>
         </div>
       </div>
-      
-      <p class="note" style="margin-top: 50px;font-size: 12px; margin-bottom:10px;">Nota: Formula kewangan ini hanyalah sebagai garis panduan.</p>
+
+      <p class="note" style="margin-top: 50px;font-size: 12px; margin-bottom:10px;">Nota: Formula kewangan ini hanyalah
+        sebagai garis panduan.</p>
     </div>
     <p style="margin-top: 10px; font-size: 12px; opacity: .3;">Made by <a href="https://meyadam.com">MeyAdam</a></p>
   </div>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/service-worker.js')
+          .then(registration => {
+            console.log('Service Worker registered: ', registration);
+          })
+          .catch(error => {
+            console.log('Service Worker registration failed: ', error);
+          });
+      });
+    }
+  </script>
 
   <script src="assets/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/language.js"></script>
