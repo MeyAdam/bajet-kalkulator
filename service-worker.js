@@ -20,7 +20,6 @@ self.addEventListener('install', event => {
   event.waitUntil(
     caches.open(cacheName)
       .then(cache => {
-        console.log('Cache opened');
         return cache.addAll(filesToCache);
       })
   );
@@ -32,10 +31,6 @@ self.addEventListener('fetch', event => {
     caches.match(event.request)
       .then(response => {
         return response || fetch(event.request);
-        // if (response) {
-        //   return response;
-        // }
-        // return fetch(event.request);
       })
   );
 });
