@@ -1,12 +1,14 @@
-# bajet-kalkulator
- --- MALAY
- Mengira bajet bulanan gaji bersih menggunakan formula 50/30/20 dan 70/20/10 (formula yang saya selalu guna).
- Pemilihan formula berdasarkan nasihat kebanyakan orang dan penasihat kewangan.
-
- Menggunakan HTML, CSS (SASS) dan vanilla JavaScript.
-
- --- ENGLISH
- Calculate after-tax income using formula 50/30/20 and 70/20/10 (formula that I use most of the time).
- The selection of the formula is based on the advice of most people and financial advisors.
-
- Using HTML, CSS (SASS) and vanilla JavaScript.
+# Bajet Gaji Bulanan - v2
+### Tech Stack
+- HTML, CSS, Bootstrap, JavaScript.
+---
+### Function
+- Default language is Malay. Language switcher button at top right. Only Malay and English is available.
+- Formula used in this calculator are 50/30/20, 70/20/10 and 60/30/10, for commitments, wants and savings percentage respectively.
+- Visitor can insert their net salary, choose their desired formula, insert their commitments, calculate total commitments and balance from commitment budget percentage. 
+---
+### Changes
+- Additional formula.
+- Optimize code (maybe).
+- Use Bootstrap.
+- Different logics.
